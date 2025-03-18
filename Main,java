@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class MultipleOfHundred {
+    public static void main(String[] args) {
+        // Create a Scanner object to read user input
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user to enter a number
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+
+        // Check if the number is a multiple of 100
+        if (isMultipleOfHundred(number)) {
+            System.out.println(number + " is a multiple of 100.");
+        } else {
+            System.out.println(number + " is NOT a multiple of 100.");
+        }
+
+        // Close the scanner
+        scanner.close();
+    }
+
+    /**
+     * Method to check if a number is a multiple of 100.
+     * @param num The number to check
+     * @return true if the number is a multiple of 100, false otherwise
+     */
+    public static boolean isMultipleOfHundred(int num) {
+        return num % 100 == 0;
+    }
+}
